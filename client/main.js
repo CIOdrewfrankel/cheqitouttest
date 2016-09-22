@@ -12,38 +12,37 @@ Template.testAppMain.onCreated(function() {
      {
         startTime: sessionStart,
      }
-  )
+  );
   myFunction = function() {
     sessionHour = new Date();
     allDataQuestions.insert(
        {
           checkTime: sessionHour,
        }
-    )
-  }
+    );
+  };
   window.setTimeout(myFunction, 3600000);
 });
 
 Template.testAppMain.helpers({
   'testFinish': function(){
     if (Session.get('finishTest')) {
-      return "display: inline"
+      return "display: inline";
     } else {
-      return "display: none"
+      return "display: none";
     }
   },
   'hideTest': function(){
     if (Session.get('finishTest')) {
-      return "display: none"
+      return "display: none";
     } else {
-      return "display: inline"
+      return "display: inline";
     }
   }
 });
 
 Template.testAppMain.events({
   'submit #questionOne'(event) {
-    alert('paused');
     event.preventDefault();
     questionOneValue = event.target.questionOneBox.value;
     var contactsArray = [ {name: "Joe", area: "Vancouver, WA"},
@@ -57,7 +56,7 @@ Template.testAppMain.events({
     if(error){
         alert('Error');
       } else{
-        alert('Success!')
+        alert('Success!');
       }
     });
     //Meteor.call("aaa");
@@ -69,11 +68,18 @@ Template.testAppMain.events({
   },
   'submit #questionThree'(event) {
     event.preventDefault();
+    alert("Question Three Submitted");
     questionThreeValue = event.target.questionThreeBox.value;
     window.eval(questionThreeValue);
   },
   'submit #finishTest'(event) {
     event.preventDefault();
+    var d = new Date();
+    allDataQuestions.insert(
+       {
+          test_submitted: d,
+       }
+    );
     Session.set('finishTest', true);
   },
 });

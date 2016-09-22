@@ -24,6 +24,17 @@ Meteor.methods({
         console.log('Arrays are not the same length.');
         console.log(returnArray.length);
         console.log(desiredArray.length);
+        throw new Meteor.Error(500, 'Error 500: Not found', 'Arrays are not the same length.');
+        return false;
+    }
+    if(returnArray[0].length !== desiredArray[0].length) {
+        console.log('First Array Not Long Enough.');
+        throw new Meteor.Error(500, 'Error 500: Not found', 'First Array Not Long Enough.');
+        return false;
+    }
+    if(returnArray[1].length !== desiredArray[1].length) {
+        console.log('Second Array Not Long Enough.');
+        throw new Meteor.Error(500, 'Error 500: Not found', 'Second Array Not Long Enough.');
         return false;
     }
     for (i = 0; i < returnArray.length; i++) {
@@ -31,6 +42,7 @@ Meteor.methods({
         if(returnArray[i][j] !== desiredArray[i][j]) {
             console.log('One of the arrays entries are not correct');
             console.log(returnArray[i][j].toString());
+            throw new Meteor.Error(500, 'Error 500: Not found', 'One of the arrays entries are not correct');
             return false;
         }
       }
