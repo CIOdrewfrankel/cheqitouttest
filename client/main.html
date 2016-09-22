@@ -1,0 +1,50 @@
+<head>
+  <title>testapp</title>
+</head>
+
+<body>
+  <div class="blueHeader">
+    <div class="cheqitoutImage"></div><h1>cheQitout Test</h1>
+  </div>
+  {{> testAppMain}}
+</body>
+<template name="testAppMain">
+  <button class="pauseButton" type="submit" onclick="alert('The Timer is Paused. To resume press OK.')"> <i class="fa fa-pause"></i><strong>Pause Session</strong></button>
+  <div style="{{hideTest}}" class="theTest">
+    <div class="container">
+    <h2>Question One</h2>
+    <p class="firstText">Write a section of javascript code that will take this object array,</p>
+    <p class="tabShort">
+      var contactsArray = [<br>
+      <span class="tab">{name: "Joe", area: "Vancouver, WA"},<br></span>
+        <span class="tab">{name: "Jill", area: "Portland, OR" },<br></span>
+        <span class="tab"> {name: "Jose", area: "Salem, OR"}<br></span>
+      ];
+    </p>
+    <p>Then turn it into a 2 row 3 column two-dimensional array where the first row lists the three names starting from Joe and the second row lists the three locations starting with Vancouver, WA. Call this newly formed array "returnArray". If the contents in returnArray are correct upon submit, the question will be completed.</p>
+    <textarea class="questionBox" name="questionOneBox" form="questionOne">Enter Code Here...</textarea><br>
+    <form id="questionOne">
+      <input class="submitButton" type="submit">
+    </form>
+    <h2>Question Two</h2>
+    <p>Call the meteor method "questionTwoFunction" and alert a success to the browser.</p>
+    <textarea class="questionBox" name="questionTwoBox" form="questionTwo">Enter Code Here...</textarea><br>
+    <br>
+    <form id="questionTwo">
+      <input class="submitButton" type="submit">
+    </form>
+    <h2>Question Three</h2>
+    <p>Insert your first name and a full date object into the mongo collection (database) 'questionThreeData'.</p>
+    <textarea class="questionBox" name="questionThreeBox" form="questionThree">Enter Code Here...</textarea><br>
+    <form id="questionThree">
+      <input class="submitButton" type="submit">
+    </form>
+    <form id="finishTest">
+      <input class="finishTest" type="submit" value="Finish Test">
+    </form>
+  </div>
+  </div>
+  <div style="{{testFinish}}" class='endTest'>
+    <p class="endTestText">The Test has been completed!</p>
+  </div>
+</template>

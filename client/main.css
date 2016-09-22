@@ -1,0 +1,143 @@
+/* CSS declarations go here */
+body {
+  margin: 0px;
+}
+.tab {
+  margin-left: 4em;
+}
+
+.tabShort {
+  margin-left: 2em;
+}
+
+.questionBox {
+  height: 300px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.pauseButton {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+
+.cheqitoutImage {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 14px;
+    margin-left: 20px;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-image: url(https://cheqitout.co/images/header_icon.png);
+    box-shadow: 0px 2px 8px -3px #333;
+}
+
+h1 {
+  text-align: center;
+  float: left;
+  font-size: 1.7em;
+  margin-left: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  font-family: nobel;
+}
+
+.blueHeader {
+  width: 100%;
+  height: 100px;
+  background: teal;
+  padding-top: 20px;
+  margin-top: 0px;
+}
+
+.pauseButton {
+  height: 40px;
+  width: 210px;
+  font-size: 20px;
+  margin-top: 4px;
+  margin-right: 4px;
+  font-family: nobel;
+  background: #e76a24;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.submitButton {
+  height: 40px;
+  width: 210px;
+  font-size: 20px;
+  margin-top: 4px;
+  margin-right: 4px;
+  font-family: nobel;
+  background: teal;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.finishTest {
+  height: 40px;
+  width: 210px;
+  font-size: 20px;
+  margin-top: 4px;
+  margin-right: 4px;
+  font-family: nobel;
+  background: #e76a24;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.pauseButton:Hover {
+  color: #fff;
+    opacity: 0.8;
+}
+
+.finishTest:Hover {
+  color: #fff;
+    opacity: 0.8;
+}
+
+.submitButton:Hover {
+  color: #fff;
+    opacity: 0.8;
+}
+
+.fa {
+  margin-right: 12px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.firstText {
+  margin-top: 50px;
+}
+
+.container {
+  padding-left: 35px;
+  padding-right: 150px;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+#finishTest {
+  margin-top: 15px;
+}
+
+.endTestText {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 150px;
+}
