@@ -15,7 +15,7 @@ Meteor.methods({
     Meteor.users.update({_id: Meteor.userId()},{$inc: {"profile.count": 1}});
   },
   "questionOneFunction": function(returnArray){
-    console.log('hello');
+    console.log('Question One Called...');
     desiredArray = [
       ['Joe', 'Jill', 'Jose'],
       ['Vancouver, WA', 'Portland, OR', 'Salem, OR']
@@ -24,17 +24,17 @@ Meteor.methods({
         console.log('Arrays are not the same length.');
         console.log(returnArray.length);
         console.log(desiredArray.length);
-        throw new Meteor.Error(500, 'Error 500: Not found', 'Arrays are not the same length.');
+        throw new Meteor.Error(500, 'Arrays are not the same length.', 'Arrays are not the same length.');
         return false;
     }
     if(returnArray[0].length !== desiredArray[0].length) {
         console.log('First Array Not Long Enough.');
-        throw new Meteor.Error(500, 'Error 500: Not found', 'First Array Not Long Enough.');
+        throw new Meteor.Error(500, 'First Array Not Long Enough.', 'First Array Not Long Enough.');
         return false;
     }
     if(returnArray[1].length !== desiredArray[1].length) {
         console.log('Second Array Not Long Enough.');
-        throw new Meteor.Error(500, 'Error 500: Not found', 'Second Array Not Long Enough.');
+        throw new Meteor.Error(500, 'Second Array Not Long Enough.', 'Second Array Not Long Enough.');
         return false;
     }
     for (i = 0; i < returnArray.length; i++) {
@@ -42,7 +42,7 @@ Meteor.methods({
         if(returnArray[i][j] !== desiredArray[i][j]) {
             console.log('One of the arrays entries are not correct');
             console.log(returnArray[i][j].toString());
-            throw new Meteor.Error(500, 'Error 500: Not found', 'One of the arrays entries are not correct');
+            throw new Meteor.Error(500, 'One of the arrays entries are not correct', 'One of the arrays entries are not correct.');
             return false;
         }
       }

@@ -54,7 +54,7 @@ Template.testAppMain.events({
     //Meteor.call("questionOneFunction", returnArray);
     Meteor.call('questionOneFunction', returnArray, function(error, result){
     if(error){
-        alert('Error');
+        alert(error);
       } else{
         alert('Success!');
       }
